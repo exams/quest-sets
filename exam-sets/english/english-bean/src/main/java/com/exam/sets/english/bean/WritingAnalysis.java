@@ -22,4 +22,41 @@ public class WritingAnalysis {
      */
     private String referenceAnswer;
 
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getAnalysis() {
+		return analysis;
+	}
+
+	public void setAnalysis(String analysis) {
+		this.analysis = analysis;
+	}
+
+	public String getReferenceAnswer() {
+		return referenceAnswer;
+	}
+
+	public void setReferenceAnswer(String referenceAnswer) {
+		this.referenceAnswer = referenceAnswer;
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("WritingAnalysis [id=");
+		builder.append(id);
+		builder.append(", analysis=");
+		builder.append(analysis);
+		builder.append(", referenceAnswer=");
+		builder.append(referenceAnswer);
+		builder.append("]");
+		return builder.toString();
+	}
+
 }

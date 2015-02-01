@@ -27,4 +27,51 @@ public class ListeningBlank {
      */
     private String analysis;
 
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public int getQuestionIndex() {
+		return questionIndex;
+	}
+
+	public void setQuestionIndex(int questionIndex) {
+		this.questionIndex = questionIndex;
+	}
+
+	public String getCorrectAnswer() {
+		return correctAnswer;
+	}
+
+	public void setCorrectAnswer(String correctAnswer) {
+		this.correctAnswer = correctAnswer;
+	}
+
+	public String getAnalysis() {
+		return analysis;
+	}
+
+	public void setAnalysis(String analysis) {
+		this.analysis = analysis;
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("ListeningBlank [id=");
+		builder.append(id);
+		builder.append(", questionIndex=");
+		builder.append(questionIndex);
+		builder.append(", correctAnswer=");
+		builder.append(correctAnswer);
+		builder.append(", analysis=");
+		builder.append(analysis);
+		builder.append("]");
+		return builder.toString();
+	}
+
 }

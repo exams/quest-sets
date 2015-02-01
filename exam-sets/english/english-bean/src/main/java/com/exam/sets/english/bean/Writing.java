@@ -47,4 +47,91 @@ public class Writing {
      */
     private int difficultyDegree;
 
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getArticle() {
+		return article;
+	}
+
+	public void setArticle(String article) {
+		this.article = article;
+	}
+
+	public boolean isReal() {
+		return isReal;
+	}
+
+	public void setReal(boolean isReal) {
+		this.isReal = isReal;
+	}
+
+	public int getYear() {
+		return year;
+	}
+
+	public void setYear(int year) {
+		this.year = year;
+	}
+
+	public int getScoreValue() {
+		return scoreValue;
+	}
+
+	public void setScoreValue(int scoreValue) {
+		this.scoreValue = scoreValue;
+	}
+
+	public String getPart() {
+		return part;
+	}
+
+	public void setPart(String part) {
+		this.part = part;
+	}
+
+	public String getSection() {
+		return section;
+	}
+
+	public void setSection(String section) {
+		this.section = section;
+	}
+
+	public int getDifficultyDegree() {
+		return difficultyDegree;
+	}
+
+	public void setDifficultyDegree(int difficultyDegree) {
+		this.difficultyDegree = difficultyDegree;
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Writing [id=");
+		builder.append(id);
+		builder.append(", article=");
+		builder.append(article);
+		builder.append(", isReal=");
+		builder.append(isReal);
+		builder.append(", year=");
+		builder.append(year);
+		builder.append(", scoreValue=");
+		builder.append(scoreValue);
+		builder.append(", part=");
+		builder.append(part);
+		builder.append(", section=");
+		builder.append(section);
+		builder.append(", difficultyDegree=");
+		builder.append(difficultyDegree);
+		builder.append("]");
+		return builder.toString();
+	}
+
 }
