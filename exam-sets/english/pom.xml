@@ -15,5 +15,8 @@
   	<module>english-bean</module>
   	<module>english-service</module>
     <module>english-common</module>
+    <module>english-interface</module>
+    <module>english-web</module>
+    <module>english-rest</module>
   </modules>
 </project>

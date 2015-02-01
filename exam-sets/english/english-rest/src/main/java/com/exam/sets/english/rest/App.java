@@ -1,4 +1,4 @@
-package com.exam.sets.english.bean;
+package com.exam.sets.english.rest;
 
 /**
  * Hello world!
