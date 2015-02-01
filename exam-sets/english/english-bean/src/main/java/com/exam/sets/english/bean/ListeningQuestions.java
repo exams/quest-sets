@@ -42,4 +42,81 @@ public class ListeningQuestions {
      */
     private String chooseItems;
 
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getCorrectAnswer() {
+		return correctAnswer;
+	}
+
+	public void setCorrectAnswer(String correctAnswer) {
+		this.correctAnswer = correctAnswer;
+	}
+
+	public String getConfuseAnswer() {
+		return confuseAnswer;
+	}
+
+	public void setConfuseAnswer(String confuseAnswer) {
+		this.confuseAnswer = confuseAnswer;
+	}
+
+	public String getAnalysis() {
+		return analysis;
+	}
+
+	public void setAnalysis(String analysis) {
+		this.analysis = analysis;
+	}
+
+	public String getKnowlegePoint() {
+		return knowlegePoint;
+	}
+
+	public void setKnowlegePoint(String knowlegePoint) {
+		this.knowlegePoint = knowlegePoint;
+	}
+
+	public int getQuestionIndex() {
+		return questionIndex;
+	}
+
+	public void setQuestionIndex(int questionIndex) {
+		this.questionIndex = questionIndex;
+	}
+
+	public String getChooseItems() {
+		return chooseItems;
+	}
+
+	public void setChooseItems(String chooseItems) {
+		this.chooseItems = chooseItems;
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("ListeningQuestions [id=");
+		builder.append(id);
+		builder.append(", correctAnswer=");
+		builder.append(correctAnswer);
+		builder.append(", confuseAnswer=");
+		builder.append(confuseAnswer);
+		builder.append(", analysis=");
+		builder.append(analysis);
+		builder.append(", knowlegePoint=");
+		builder.append(knowlegePoint);
+		builder.append(", questionIndex=");
+		builder.append(questionIndex);
+		builder.append(", chooseItems=");
+		builder.append(chooseItems);
+		builder.append("]");
+		return builder.toString();
+	}
+
 }
