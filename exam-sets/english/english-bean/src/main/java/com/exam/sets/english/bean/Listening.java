@@ -45,7 +45,7 @@ public class Listening {
     private String radioPath;
 
     /**
-     * part I section C听力题干
+     * part I section C 听力题干
      */
     private String content;
 
