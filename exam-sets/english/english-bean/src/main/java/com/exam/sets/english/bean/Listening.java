@@ -54,7 +54,6 @@ public class Listening {
      */
     public int difficultyDegree;
 
-<<<<<<< HEAD
 	public String getId() {
 		return id;
 	}
@@ -153,6 +152,3 @@ public class Listening {
 	}
 
 }
-=======
-}
->>>>>>> e8f6d96a1d7808afe91c64481a5f822275ac8d9e
