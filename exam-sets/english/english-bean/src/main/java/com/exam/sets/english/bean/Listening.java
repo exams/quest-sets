@@ -45,7 +45,7 @@ public class Listening {
     private String radioPath;
 
     /**
-     * part I section C听力题干
+     * part I section C 听力题干
      */
     private String content;
 
@@ -54,6 +54,7 @@ public class Listening {
      */
     public int difficultyDegree;
 
+<<<<<<< HEAD
 	public String getId() {
 		return id;
 	}
@@ -152,3 +153,6 @@ public class Listening {
 	}
 
 }
+=======
+}
+>>>>>>> e8f6d96a1d7808afe91c64481a5f822275ac8d9e
