@@ -7,9 +7,9 @@
     <artifactId>math</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
+  
   <groupId>com.exam.sets.math</groupId>
   <artifactId>math-bean</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
   <name>math-bean</name>
   <url>http://maven.apache.org</url>
   <properties>

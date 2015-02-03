@@ -15,15 +15,13 @@
   	<module>english-bean</module>
   	<module>english-service</module>
     <module>english-common</module>
-    <module>english-interface</module>
-    <module>english-web</module>
     <module>english-rest</module>
   </modules>
   <dependencies>
   	<dependency>
   		<groupId>org.springframework</groupId>
   		<artifactId>spring-core</artifactId>
-  		<version>4.1.4.RELEASE</version>
+  		<version>4.1.4.RELEASE</version>  
   	</dependency>
   	<dependency>
   		<groupId>org.springframework</groupId>

@@ -7,9 +7,9 @@
     <artifactId>english</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
+  
   <groupId>com.exam.sets.english</groupId>
   <artifactId>english-service</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
   <name>english-service</name>
   <url>http://maven.apache.org</url>
   <properties>
