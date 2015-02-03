@@ -1,10 +1,18 @@
 package com.exam.sets.english.bean;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+import org.hibernate.annotations.GenericGenerator;
+
 /**
  * 听力选择题
  * @author wangyang
  * 2015-02-01
  */
+@Entity
 public class ListeningQuestions {
 
     /**
@@ -42,6 +50,10 @@ public class ListeningQuestions {
      */
     private String chooseItems;
 
+	@Id
+	@GenericGenerator(name="hibernateUuid", strategy="uuid")
+	@GeneratedValue(generator="hibernateUuid")
+	@Column(nullable=false)
 	public String getId() {
 		return id;
 	}

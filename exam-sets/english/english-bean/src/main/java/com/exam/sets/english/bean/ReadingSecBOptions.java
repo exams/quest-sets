@@ -1,10 +1,18 @@
 package com.exam.sets.english.bean;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+import org.hibernate.annotations.GenericGenerator;
+
 /**
  * 阅读理解SectionB固定选项
  * @author wangyang
  * 2015-02-01
  */
+@Entity
 public class ReadingSecBOptions {
 
     /**
@@ -17,6 +25,10 @@ public class ReadingSecBOptions {
      */
     private String label;
 
+	@Id
+	@GenericGenerator(name="hibernateUuid", strategy="uuid")
+	@GeneratedValue(generator="hibernateUuid")
+	@Column(nullable=false)
 	public String getId() {
 		return id;
 	}

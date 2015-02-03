@@ -1,10 +1,18 @@
 package com.exam.sets.english.bean;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+import org.hibernate.annotations.GenericGenerator;
+
 /**
  * 写作
  * @author wangyang
  * 2015-02-01
  */
+@Entity
 public class Writing {
 
     /**
@@ -47,6 +55,10 @@ public class Writing {
      */
     private int difficultyDegree;
 
+	@Id
+	@GenericGenerator(name="hibernateUuid", strategy="uuid")
+	@GeneratedValue(generator="hibernateUuid")
+	@Column(nullable=false)
 	public String getId() {
 		return id;
 	}

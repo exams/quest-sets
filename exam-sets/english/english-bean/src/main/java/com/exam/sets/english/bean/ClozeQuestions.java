@@ -1,10 +1,18 @@
 package com.exam.sets.english.bean;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+import org.hibernate.annotations.GenericGenerator;
+
 /**
  * 完型天空选择题
  * @author wangyang
  * 2015-02-01
  */
+@Entity
 public class ClozeQuestions {
 
     /**
@@ -37,6 +45,10 @@ public class ClozeQuestions {
      */
     private String confuseAnswer;
 
+	@Id
+	@GenericGenerator(name="hibernateUuid", strategy="uuid")
+	@GeneratedValue(generator="hibernateUuid")
+	@Column(nullable=false)
 	public String getId() {
 		return id;
 	}

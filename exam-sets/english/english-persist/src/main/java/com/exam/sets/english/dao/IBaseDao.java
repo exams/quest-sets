@@ -1,10 +1,11 @@
 package com.exam.sets.english.dao;
 
+import java.io.Serializable;
 import java.util.List;
 
 public interface IBaseDao<M> {
     
-	public String save(M model);
+	public Serializable save(M model);
 
     public void saveOrUpdate(M model);
     
@@ -12,11 +13,11 @@ public interface IBaseDao<M> {
     
     public void merge(M model);
 
-    public void delete(String id);
+    public void delete(Serializable id);
 
     public void deleteObject(M model);
 
-    public M get(String id);
+    public M get(Serializable id);
     
     public int countAll();
 
@@ -24,11 +25,11 @@ public interface IBaseDao<M> {
 
     public List<M> listAll(int pn, int pageSize);
     
-    public List<M> pre(String id, int pn, int pageSize);
+    public List<M> pre(Serializable id, int pn, int pageSize);
     
-    public List<M> next(String pk, int pn, int pageSize);
+    public List<M> next(Serializable id, int pn, int pageSize);
     
-    public boolean exists(String id);
+    public boolean exists(Serializable id);
     
     public void flush();
     
