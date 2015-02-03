@@ -8,7 +8,7 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 
-import com.exam.sets.english.dao.IBaseDao;
+import com.exam.sets.english.persist.dao.IBaseDao;
 
 public class BaseDaoImpl<M> implements IBaseDao<M> {
 
