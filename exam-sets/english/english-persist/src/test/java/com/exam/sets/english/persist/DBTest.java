@@ -5,27 +5,27 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.transaction.annotation.Transactional;
 
-import com.exam.sets.english.bean.Translation;
+import com.exam.sets.english.bean.Options;
+import com.exam.sets.english.bean.enums.QuestionType;
 import com.exam.sets.english.persist.dao.IBaseDao;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations={"classpath:spring-config.xml"})
+@Transactional("txManager")
 public class DBTest
 {
 	@Autowired
-	private IBaseDao<Translation> transDao;
+	private IBaseDao<Options> transDao;
    
 	@Test
 	public void testDao(){
-		Translation translation = new Translation();
-		translation.setArticle("123123123123dfasdfasdfasdfasdfasdfasdfasadfasdfasdfasdfasdf");
-		translation.setDifficultyDegree(8);
-		translation.setPart("I");
-		translation.setReal(true);
-		translation.setScoreValue(5);
-		translation.setSection("C");
-		translation.setYear(2014);
-		transDao.save(translation);
+		Options options = new Options();
+		options.setLabel("A");
+		options.setContent("hello, this is test");
+		options.setQuestionType(QuestionType.READING);
+		
+		transDao.save(options);
 	}
 }
