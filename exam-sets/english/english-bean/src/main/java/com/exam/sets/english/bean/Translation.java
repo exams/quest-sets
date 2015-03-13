@@ -2,10 +2,13 @@ package com.exam.sets.english.bean;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Type;
 
 /**
  * 翻译
@@ -54,17 +57,25 @@ public class Translation {
      * 难度系数，取值1到10
      */
     private int difficultyDegree;
+    
+    /**
+     * 翻译解析
+     */
+    @OneToOne
+    private TranslateAnalysis translateAnalysis;
+    
+    /**
+     * 翻译题参考答案
+     */
+    @OneToOne(fetch=FetchType.LAZY)
+    private TranslateReferAnswer translateReferAnswer;
 
 	@Id
 	@GenericGenerator(name="hibernateUuid", strategy="uuid")
 	@GeneratedValue(generator="hibernateUuid")
-	@Column(nullable=false)
+	@Column(unique = true, nullable=false)
 	public String getId() {
 		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
 	}
 
 	public String getArticle() {
@@ -74,7 +85,8 @@ public class Translation {
 	public void setArticle(String article) {
 		this.article = article;
 	}
-
+	
+	@Type(type="true_false" )
 	public boolean isReal() {
 		return isReal;
 	}
@@ -123,6 +135,28 @@ public class Translation {
 		this.difficultyDegree = difficultyDegree;
 	}
 
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	@OneToOne
+	public TranslateAnalysis getTranslateAnalysis() {
+		return translateAnalysis;
+	}
+
+	public void setTranslateAnalysis(TranslateAnalysis translateAnalysis) {
+		this.translateAnalysis = translateAnalysis;
+	}
+
+	@OneToOne
+	public TranslateReferAnswer getTranslateReferAnswer() {
+		return translateReferAnswer;
+	}
+
+	public void setTranslateReferAnswer(TranslateReferAnswer translateReferAnswer) {
+		this.translateReferAnswer = translateReferAnswer;
+	}
+
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
@@ -145,5 +179,5 @@ public class Translation {
 		builder.append("]");
 		return builder.toString();
 	}
-
+	
 }
