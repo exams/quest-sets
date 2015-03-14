@@ -2,8 +2,10 @@ package com.exam.sets.english.bean;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 import org.hibernate.annotations.GenericGenerator;
 
@@ -54,6 +56,16 @@ public class Writing {
      * 难度系数，取值1到10
      */
     private int difficultyDegree;
+    
+    /**
+     * 写作题分析
+     */
+    private WritingAnalysis writingAnalysis;
+    
+    /**
+     * 写作题参考答案
+     */
+    private WritingReferAnswer writingReferAnswer;
 
 	@Id
 	@GenericGenerator(name="hibernateUuid", strategy="uuid")
@@ -75,6 +87,7 @@ public class Writing {
 		this.article = article;
 	}
 
+	@Column(name="isReal")
 	public boolean isReal() {
 		return isReal;
 	}
@@ -121,6 +134,24 @@ public class Writing {
 
 	public void setDifficultyDegree(int difficultyDegree) {
 		this.difficultyDegree = difficultyDegree;
+	}
+
+	@OneToOne(fetch=FetchType.LAZY)
+	public WritingAnalysis getWritingAnalysis() {
+		return writingAnalysis;
+	}
+
+	public void setWritingAnalysis(WritingAnalysis writingAnalysis) {
+		this.writingAnalysis = writingAnalysis;
+	}
+
+	@OneToOne(fetch=FetchType.LAZY)
+	public WritingReferAnswer getWritingReferAnswer() {
+		return writingReferAnswer;
+	}
+
+	public void setWritingReferAnswer(WritingReferAnswer writingReferAnswer) {
+		this.writingReferAnswer = writingReferAnswer;
 	}
 
 	@Override

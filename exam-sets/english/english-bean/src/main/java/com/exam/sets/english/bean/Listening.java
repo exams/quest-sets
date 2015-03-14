@@ -74,6 +74,7 @@ public class Listening {
 		this.id = id;
 	}
 
+	@Column(name="isReal")
 	public boolean isReal() {
 		return isReal;
 	}

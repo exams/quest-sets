@@ -1,9 +1,12 @@
 package com.exam.sets.english.bean;
 
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 import org.hibernate.annotations.GenericGenerator;
 
@@ -59,6 +62,8 @@ public class Cloze {
      * 完型填空题干
      */
     private String article;
+    
+    private Set<ClozeQuestion> clozeQuestion;
 
 	@Id
 	@GenericGenerator(name="hibernateUuid", strategy="uuid")
@@ -72,6 +77,7 @@ public class Cloze {
 		this.id = id;
 	}
 
+	@Column(name="isReal")
 	public boolean isReal() {
 		return isReal;
 	}
@@ -134,6 +140,15 @@ public class Cloze {
 
 	public void setArticle(String article) {
 		this.article = article;
+	}
+	
+	@OneToMany
+	public Set<ClozeQuestion> getClozeQuestion() {
+		return clozeQuestion;
+	}
+
+	public void setClozeQuestion(Set<ClozeQuestion> clozeQuestion) {
+		this.clozeQuestion = clozeQuestion;
 	}
 
 	@Override

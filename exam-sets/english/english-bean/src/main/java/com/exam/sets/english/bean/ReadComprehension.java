@@ -72,6 +72,7 @@ public class ReadComprehension {
 		this.id = id;
 	}
 
+	@Column(name="isReal")
 	public boolean isReal() {
 		return isReal;
 	}

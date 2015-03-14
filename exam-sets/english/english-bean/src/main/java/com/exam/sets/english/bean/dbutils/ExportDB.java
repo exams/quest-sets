@@ -4,14 +4,14 @@ import org.hibernate.cfg.AnnotationConfiguration;
 import org.hibernate.tool.hbm2ddl.SchemaExport;
 
 import com.exam.sets.english.bean.Cloze;
-import com.exam.sets.english.bean.ClozeQuestions;
+import com.exam.sets.english.bean.ClozeQuestion;
 import com.exam.sets.english.bean.Listening;
 import com.exam.sets.english.bean.ListeningBlank;
-import com.exam.sets.english.bean.ListeningQuestions;
+import com.exam.sets.english.bean.ListeningQuestion;
 import com.exam.sets.english.bean.Options;
 import com.exam.sets.english.bean.ReadComprehension;
-import com.exam.sets.english.bean.ReadingQuestions;
-import com.exam.sets.english.bean.ReadingSecBOptions;
+import com.exam.sets.english.bean.ReadingQuestion;
+import com.exam.sets.english.bean.ReadingSecBOption;
 import com.exam.sets.english.bean.TranslateAnalysis;
 import com.exam.sets.english.bean.TranslateReferAnswer;
 import com.exam.sets.english.bean.Translation;
@@ -32,14 +32,14 @@ public class ExportDB {
 		.setProperty("hibernate.show_sql", "true");
 		
 		cfg.addAnnotatedClass(Cloze.class);
-		cfg.addAnnotatedClass(ClozeQuestions.class);
+		cfg.addAnnotatedClass(ClozeQuestion.class);
 		cfg.addAnnotatedClass(Listening.class);
 		cfg.addAnnotatedClass(ListeningBlank.class);
-		cfg.addAnnotatedClass(ListeningQuestions.class);
+		cfg.addAnnotatedClass(ListeningQuestion.class);
 		cfg.addAnnotatedClass(Options.class);
 		cfg.addAnnotatedClass(ReadComprehension.class);
-		cfg.addAnnotatedClass(ReadingQuestions.class);
-		cfg.addAnnotatedClass(ReadingSecBOptions.class);
+		cfg.addAnnotatedClass(ReadingQuestion.class);
+		cfg.addAnnotatedClass(ReadingSecBOption.class);
 		cfg.addAnnotatedClass(TranslateAnalysis.class);
 		cfg.addAnnotatedClass(TranslateReferAnswer.class);
 		cfg.addAnnotatedClass(Translation.class);

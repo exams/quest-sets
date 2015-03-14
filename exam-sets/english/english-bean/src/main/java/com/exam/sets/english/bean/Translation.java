@@ -8,7 +8,6 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
 import org.hibernate.annotations.GenericGenerator;
-import org.hibernate.annotations.Type;
 
 /**
  * 翻译
@@ -61,13 +60,11 @@ public class Translation {
     /**
      * 翻译解析
      */
-    @OneToOne
     private TranslateAnalysis translateAnalysis;
     
     /**
      * 翻译题参考答案
      */
-    @OneToOne(fetch=FetchType.LAZY)
     private TranslateReferAnswer translateReferAnswer;
 
 	@Id
@@ -139,7 +136,7 @@ public class Translation {
 		this.id = id;
 	}
 
-	@OneToOne
+	@OneToOne(fetch=FetchType.LAZY)
 	public TranslateAnalysis getTranslateAnalysis() {
 		return translateAnalysis;
 	}
@@ -148,7 +145,7 @@ public class Translation {
 		this.translateAnalysis = translateAnalysis;
 	}
 
-	@OneToOne
+	@OneToOne(fetch=FetchType.LAZY)
 	public TranslateReferAnswer getTranslateReferAnswer() {
 		return translateReferAnswer;
 	}
