@@ -86,7 +86,7 @@ public class Translation {
 		this.article = article;
 	}
 	
-	@Type(type="true_false" )
+	@Column(name="isReal")
 	public boolean isReal() {
 		return isReal;
 	}
