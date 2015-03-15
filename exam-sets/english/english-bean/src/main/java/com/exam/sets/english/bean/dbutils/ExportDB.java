@@ -8,7 +8,7 @@ import com.exam.sets.english.bean.ClozeQuestion;
 import com.exam.sets.english.bean.Listening;
 import com.exam.sets.english.bean.ListeningBlank;
 import com.exam.sets.english.bean.ListeningQuestion;
-import com.exam.sets.english.bean.Options;
+import com.exam.sets.english.bean.Option;
 import com.exam.sets.english.bean.ReadComprehension;
 import com.exam.sets.english.bean.ReadingQuestion;
 import com.exam.sets.english.bean.ReadingSecBOption;
@@ -36,7 +36,7 @@ public class ExportDB {
 		cfg.addAnnotatedClass(Listening.class);
 		cfg.addAnnotatedClass(ListeningBlank.class);
 		cfg.addAnnotatedClass(ListeningQuestion.class);
-		cfg.addAnnotatedClass(Options.class);
+		cfg.addAnnotatedClass(Option.class);
 		cfg.addAnnotatedClass(ReadComprehension.class);
 		cfg.addAnnotatedClass(ReadingQuestion.class);
 		cfg.addAnnotatedClass(ReadingSecBOption.class);

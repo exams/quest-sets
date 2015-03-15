@@ -15,4 +15,5 @@ public class RestSample {
 		model.addAttribute("getInfo");
 	}
 	
+	
 }

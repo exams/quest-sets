@@ -6,6 +6,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 import org.hibernate.annotations.GenericGenerator;
 
@@ -50,7 +51,7 @@ public class ListeningQuestion {
     /**
      * 选项
      */
-    private String chooseItems;
+    private Set<Option> chooseItems;
 
 	@Id
 	@GenericGenerator(name="hibernateUuid", strategy="uuid")
@@ -104,11 +105,12 @@ public class ListeningQuestion {
 		this.questionIndex = questionIndex;
 	}
 
-	public String getChooseItems() {
+	@OneToMany
+	public Set<Option> getChooseItems() {
 		return chooseItems;
 	}
 
-	public void setChooseItems(String chooseItems) {
+	public void setChooseItems(Set<Option> chooseItems) {
 		this.chooseItems = chooseItems;
 	}
 

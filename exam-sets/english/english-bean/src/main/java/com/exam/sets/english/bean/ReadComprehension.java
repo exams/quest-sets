@@ -56,7 +56,7 @@ public class ReadComprehension {
     private int difficultyDegree;
 
     /**
-     * 
+     * 题干
      */
     private String article;
 

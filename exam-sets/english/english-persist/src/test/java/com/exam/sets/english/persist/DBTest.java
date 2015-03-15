@@ -7,7 +7,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.exam.sets.english.bean.Options;
+import com.exam.sets.english.bean.Option;
 import com.exam.sets.english.bean.enums.QuestionType;
 import com.exam.sets.english.persist.dao.IBaseDao;
 
@@ -17,11 +17,11 @@ import com.exam.sets.english.persist.dao.IBaseDao;
 public class DBTest
 {
 	@Autowired
-	private IBaseDao<Options> transDao;
+	private IBaseDao<Option> transDao;
    
 	@Test
 	public void testDao(){
-		Options options = new Options();
+		Option options = new Option();
 		options.setLabel("A");
 		options.setContent("hello, this is test");
 		options.setQuestionType(QuestionType.READING);
