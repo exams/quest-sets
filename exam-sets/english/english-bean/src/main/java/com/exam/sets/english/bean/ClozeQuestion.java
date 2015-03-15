@@ -1,5 +1,7 @@
 package com.exam.sets.english.bean;
 
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -33,7 +35,7 @@ public class ClozeQuestion {
     /**
      * 知识点
      */
-    private String knowledgePoint;
+    private Set<KnowlegePoint> knowlegePoints;
 
     /**
      * 正确答案
@@ -73,14 +75,6 @@ public class ClozeQuestion {
 		this.analysis = analysis;
 	}
 
-	public String getKnowledgePoint() {
-		return knowledgePoint;
-	}
-
-	public void setKnowledgePoint(String knowledgePoint) {
-		this.knowledgePoint = knowledgePoint;
-	}
-
 	public String getCorrectAnswer() {
 		return correctAnswer;
 	}
@@ -97,23 +91,12 @@ public class ClozeQuestion {
 		this.confuseAnswer = confuseAnswer;
 	}
 
-	@Override
-	public String toString() {
-		StringBuilder builder = new StringBuilder();
-		builder.append("ClozeQuestions [id=");
-		builder.append(id);
-		builder.append(", questionIndex=");
-		builder.append(questionIndex);
-		builder.append(", analysis=");
-		builder.append(analysis);
-		builder.append(", knowledgePoint=");
-		builder.append(knowledgePoint);
-		builder.append(", correctAnswer=");
-		builder.append(correctAnswer);
-		builder.append(", confuseAnswer=");
-		builder.append(confuseAnswer);
-		builder.append("]");
-		return builder.toString();
+	public Set<KnowlegePoint> getKnowlegePoints() {
+		return knowlegePoints;
+	}
+
+	public void setKnowlegePoints(Set<KnowlegePoint> knowlegePoints) {
+		this.knowlegePoints = knowlegePoints;
 	}
 
 }

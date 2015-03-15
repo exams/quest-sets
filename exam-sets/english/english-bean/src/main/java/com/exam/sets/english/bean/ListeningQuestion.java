@@ -1,5 +1,7 @@
 package com.exam.sets.english.bean;
 
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -38,7 +40,7 @@ public class ListeningQuestion {
     /**
      * 知识点
      */
-    private String knowlegePoint;
+    private Set<KnowlegePoint> knowlegePoints;
 
     /**
      * 题号
@@ -86,12 +88,12 @@ public class ListeningQuestion {
 		this.analysis = analysis;
 	}
 
-	public String getKnowlegePoint() {
-		return knowlegePoint;
+	public Set<KnowlegePoint> getKnowlegePoints() {
+		return knowlegePoints;
 	}
 
-	public void setKnowlegePoint(String knowlegePoint) {
-		this.knowlegePoint = knowlegePoint;
+	public void setKnowlegePoints(Set<KnowlegePoint> knowlegePoints) {
+		this.knowlegePoints = knowlegePoints;
 	}
 
 	public int getQuestionIndex() {
@@ -108,27 +110,6 @@ public class ListeningQuestion {
 
 	public void setChooseItems(String chooseItems) {
 		this.chooseItems = chooseItems;
-	}
-
-	@Override
-	public String toString() {
-		StringBuilder builder = new StringBuilder();
-		builder.append("ListeningQuestions [id=");
-		builder.append(id);
-		builder.append(", correctAnswer=");
-		builder.append(correctAnswer);
-		builder.append(", confuseAnswer=");
-		builder.append(confuseAnswer);
-		builder.append(", analysis=");
-		builder.append(analysis);
-		builder.append(", knowlegePoint=");
-		builder.append(knowlegePoint);
-		builder.append(", questionIndex=");
-		builder.append(questionIndex);
-		builder.append(", chooseItems=");
-		builder.append(chooseItems);
-		builder.append("]");
-		return builder.toString();
 	}
 
 }

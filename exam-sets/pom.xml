@@ -7,7 +7,6 @@
   <packaging>pom</packaging>
   <modules>
     <module>english</module>
-    <module>english-persist</module>
     <module>math</module>
   </modules>
 </project>

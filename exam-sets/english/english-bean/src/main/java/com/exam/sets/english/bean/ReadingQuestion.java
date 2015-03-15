@@ -1,5 +1,7 @@
 package com.exam.sets.english.bean;
 
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -53,7 +55,7 @@ public class ReadingQuestion {
     /**
      * 知识点
      */
-    private String knowlegePoint;
+    private Set<KnowlegePoint> knowlegePoints;
 
 	@Id
 	@GenericGenerator(name="hibernateUuid", strategy="uuid")
@@ -115,35 +117,12 @@ public class ReadingQuestion {
 		this.analysis = analysis;
 	}
 
-	public String getKnowlegePoint() {
-		return knowlegePoint;
+	public Set<KnowlegePoint> getKnowlegePoints() {
+		return knowlegePoints;
 	}
 
-	public void setKnowlegePoint(String knowlegePoint) {
-		this.knowlegePoint = knowlegePoint;
-	}
-
-	@Override
-	public String toString() {
-		StringBuilder builder = new StringBuilder();
-		builder.append("ReadingQuestions [id=");
-		builder.append(id);
-		builder.append(", questionIndex=");
-		builder.append(questionIndex);
-		builder.append(", questionStem=");
-		builder.append(questionStem);
-		builder.append(", chooseItems=");
-		builder.append(chooseItems);
-		builder.append(", correctAnswer=");
-		builder.append(correctAnswer);
-		builder.append(", confuseAnswer=");
-		builder.append(confuseAnswer);
-		builder.append(", analysis=");
-		builder.append(analysis);
-		builder.append(", knowlegePoint=");
-		builder.append(knowlegePoint);
-		builder.append("]");
-		return builder.toString();
+	public void setKnowlegePoints(Set<KnowlegePoint> knowlegePoints) {
+		this.knowlegePoints = knowlegePoints;
 	}
 
 }
