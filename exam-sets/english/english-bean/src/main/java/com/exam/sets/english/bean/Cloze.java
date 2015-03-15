@@ -63,6 +63,9 @@ public class Cloze {
      */
     private String article;
     
+    /**
+     * 完型填空选项
+     */
     private Set<ClozeQuestion> clozeQuestion;
 
 	@Id

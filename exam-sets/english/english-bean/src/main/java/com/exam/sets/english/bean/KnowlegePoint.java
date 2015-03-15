@@ -21,7 +21,7 @@ public class KnowlegePoint {
     private String id;
 
     /**
-     * 是否真题
+     * 父id
      */
     private String parentId;
 
